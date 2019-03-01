@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bottom_navigation_home"
+        android:title="首页"
+        android:icon="@drawable/home"/>
+    <item android:id="@+id/bottom_navigation_Score"
+        android:title="成绩"
+        android:icon="@drawable/score"/>
+    <item android:id="@+id/bottom_navigation_personal"
+        android:title="课表"
+        android:icon="@drawable/class_schedule"/>
+</menu>

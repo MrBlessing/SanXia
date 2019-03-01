@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    app:cardCornerRadius="1dp"
+    android:padding="10dp"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/recycler_item_score_courseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/scoreText" />
+            <TextView
+                android:id="@+id/recycler_item_score_courseScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/scoreText" />
+            <TextView
+                android:id="@+id/recycler_item_score_courseGPA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/scoreText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/recycler_item_score_courseCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/scoreText" />
+            <TextView
+                android:id="@+id/recycler_item_score_mCourseCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/scoreText" />
+            <TextView
+                android:id="@+id/recycler_item_score_schoolYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/scoreText" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/recycler_item_score_colorView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

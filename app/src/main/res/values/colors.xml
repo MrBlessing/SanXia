@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--显示成绩的字体颜色-->
+    <color name="scoreTextColor">#000</color>
+    <!--登陆输入框背景半透明颜色-->
+    <color name="translucence">#40AAAAAA</color>
+    <!--登陆按钮的背景颜色-->
+    <color name="buttonBg">#bbe7e4</color>
+    <!--主色调-->
+    <color name="mainColor">#bbe7e4</color>
+
+    <!--超过90分显示的颜色-->
+    <color name="red1">#FF0000</color>
+    <!--超过80分显示的颜色-->
+    <color name="red2">#FF6347</color>
+    <!--超过70分显示的颜色-->
+    <color name="red3">#FFA07A</color>
+    <!--超过60分显示的颜色-->
+    <color name="yellow1">#FFA500</color>
+    <!--没及格显示的颜色-->
+    <color name="yellow2">#FFFF00</color>
+    <color name="black">#000</color>
+</resources>

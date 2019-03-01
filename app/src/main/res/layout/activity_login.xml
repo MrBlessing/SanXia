@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical"
+    tools:context=".Activity.Login">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_login_input"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/login_account" />
+
+            <EditText
+                android:id="@+id/login_account"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:maxLength="10"
+                android:textColorHint="#fff"
+                android:text="2018101703"
+                android:hint="学号" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_login_input"
+            android:layout_marginTop="35dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/login_password" />
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:text="9992718"
+                android:hint="密码"
+                android:textColorHint="#fff"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_login_input"
+                android:padding= "10dp">
+
+                <EditText
+                    android:id="@+id/login_securityCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:maxLength="4"
+                    android:singleLine="true"
+                    android:digits="0123456789abcdefghijgklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/login_securityCodeImage"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/login_go"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="Go"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:background="@drawable/bg_login_button" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
