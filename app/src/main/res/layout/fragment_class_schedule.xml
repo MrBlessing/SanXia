@@ -1,7 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    android:id="@+id/fragment_class_schedule_refresh"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</android.support.constraint.ConstraintLayout>
+    <com.scwang.smartrefresh.header.PhoenixHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_login">
+
+            <LinearLayout
+                android:id="@+id/fix_weekend_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    style="@style/ScheduleFixText"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    style="@style/ScheduleFixText"
+                    android:text="周一"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    style="@style/ScheduleFixText"
+                    android:text="周二"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    style="@style/ScheduleFixText"
+                    android:text="周三"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    style="@style/ScheduleFixText"
+                    android:text="周四"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    style="@style/ScheduleFixText"
+                    android:text="周五"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    style="@style/ScheduleFixText"
+                    android:text="周六"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    style="@style/ScheduleFixText"
+                    android:text="周日"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_class_schedule_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

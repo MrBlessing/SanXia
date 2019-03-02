@@ -6,6 +6,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import YangtzeUniversity.yuol.sanxia.Data.ClassScheduleData;
 import YangtzeUniversity.yuol.sanxia.Data.KeyString;
@@ -27,7 +29,7 @@ public class ClassScheduleUtils {
                 classEnd.onFail();
              }else{
                 //对数据进行解析
-                ClassScheduleData data = parseRes(res);
+                List<ClassScheduleData> data = parseRes(res);
                 classEnd.onSuccess(data);
              }
           }
@@ -35,8 +37,8 @@ public class ClassScheduleUtils {
    }
 
    //该方法用于对数据进行解析
-   private ClassScheduleData parseRes(String res) {
-      ClassScheduleData data = new ClassScheduleData();
+   private List<ClassScheduleData> parseRes(String res) {
+      List<ClassScheduleData>data = new ArrayList<>();
 
       //首先提取出表格元素
       Document html =  Jsoup.parse(res);
@@ -46,35 +48,16 @@ public class ClassScheduleUtils {
       Elements tr = table.select("tr");
       //将每一个tr进行解析
       for(int i = 0; i<tr.size();i++){
-         switch (i){
-            case 0 :break;
-            case 1 :
-               data.setFirstLesson(parseEachTr(tr.get(i)));
-               break;
-            case 2 :
-               data.setSecondLesson(parseEachTr(tr.get(i)));
-               break;
-            case 3 :
-               data.setThirdLesson(parseEachTr(tr.get(i)));
-               break;
-            case 4 :
-               data.setFourLesson(parseEachTr(tr.get(i)));
-               break;
-            case 5 :
-               data.setFifthLesson(parseEachTr(tr.get(i)));
-               break;
-            case 6 :
-               data.setSixthLesson(parseEachTr(tr.get(i)));
-               break;
-            default: break;
+         if(i!=0){
+            data.add(parseEachTr(tr.get(i)));
          }
       }
       return data;
    }
 
    //解析每一行的数据，得到每一个时间段的课程
-   private ClassScheduleData.OneTime parseEachTr(Element element){
-      ClassScheduleData.OneTime oneTime = new ClassScheduleData.OneTime();
+   private ClassScheduleData parseEachTr(Element element){
+      ClassScheduleData data = new ClassScheduleData();
       Elements td = element.select("td");
       //<td>第一～二节</td>
       // <td>&nbsp;</td>
@@ -87,32 +70,34 @@ public class ClassScheduleUtils {
       //对每一个td进行解析
       for(int i = 0; i<td.size();i++){
          switch (i){
-            case 0 :break;
+            case 0 :
+               data.setTime(trimText(td.get(i).text()));
+               break;
             case 1 :
-               oneTime.setMonday(trimText(td.get(i).text()));
+               data.setMonday(trimText(td.get(i).text()));
                break;
             case 2 :
-               oneTime.setTuesday(trimText(td.get(i).text()));
+               data.setTuesday(trimText(td.get(i).text()));
                break;
             case 3 :
-               oneTime.setWednesday(trimText(td.get(i).text()));
+               data.setWednesday(trimText(td.get(i).text()));
                break;
             case 4 :
-               oneTime.setThursday(trimText(td.get(i).text()));
+               data.setThursday(trimText(td.get(i).text()));
                break;
             case 5 :
-               oneTime.setFriday(trimText(td.get(i).text()));
+               data.setFriday(trimText(td.get(i).text()));
                break;
             case 6 :
-               oneTime.setSaturday(trimText(td.get(i).text()));
+               data.setSaturday(trimText(td.get(i).text()));
                break;
             case 7 :
-               oneTime.setSunday(trimText(td.get(i).text()));
+               data.setSunday(trimText(td.get(i).text()));
                break;
             default: break;
          }
       }
-      return oneTime;
+      return data;
    }
 
    //修整文字,删除网页中的一些标签

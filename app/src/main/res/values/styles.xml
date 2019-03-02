@@ -14,5 +14,15 @@
         <item name="android:textSize">13sp</item>
     </style>
 
+    <!--课表页面中头部固定的文字样式-->
+    <style name="ScheduleFixText">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 
+    <!--课表item中的文字样式-->
+    <style name="ScheduleItemText">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

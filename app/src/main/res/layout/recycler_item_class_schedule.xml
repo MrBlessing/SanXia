@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/recycler_item_class_schedule_time"
+        android:layout_width="35dp"
+        android:layout_height="150dp"
+        style="@style/ScheduleItemText"
+        android:gravity="center"/>
+
+    <YangtzeUniversity.yuol.sanxia.CustomizedView.MyScheduleItem
+        android:id="@+id/recycler_item_class_schedule_monday"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="150dp"/>
+
+    <YangtzeUniversity.yuol.sanxia.CustomizedView.MyScheduleItem
+        android:id="@+id/recycler_item_class_schedule_tuesday"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="150dp"/>
+
+    <YangtzeUniversity.yuol.sanxia.CustomizedView.MyScheduleItem
+        android:id="@+id/recycler_item_class_schedule_wednesday"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="150dp"/>
+
+    <YangtzeUniversity.yuol.sanxia.CustomizedView.MyScheduleItem
+        android:id="@+id/recycler_item_class_schedule_thursday"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="150dp"/>
+
+    <YangtzeUniversity.yuol.sanxia.CustomizedView.MyScheduleItem
+        android:id="@+id/recycler_item_class_schedule_friday"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="150dp"/>
+
+    <YangtzeUniversity.yuol.sanxia.CustomizedView.MyScheduleItem
+        android:id="@+id/recycler_item_class_schedule_saturday"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="150dp"/>
+
+    <YangtzeUniversity.yuol.sanxia.CustomizedView.MyScheduleItem
+        android:id="@+id/recycler_item_class_schedule_sunday"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="150dp"/>
+
+
+</LinearLayout>

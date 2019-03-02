@@ -23,5 +23,8 @@
     <color name="yellow1">#FFA500</color>
     <!--没及格显示的颜色-->
     <color name="yellow2">#FFFF00</color>
+    <!--黑色-->
     <color name="black">#000</color>
+    <!--白色-->
+    <color name="white">#fff</color>
 </resources>

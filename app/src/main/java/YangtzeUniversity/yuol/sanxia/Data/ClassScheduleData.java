@@ -1,138 +1,85 @@
 package YangtzeUniversity.yuol.sanxia.Data;
 
 public class ClassScheduleData {
-    //上午第一节课
-    private OneTime firstLesson;
-    //上午第二节课
-    private OneTime secondLesson;
-    //下午第一节课
-    private OneTime thirdLesson;
-    //下午第二节
-    private OneTime fourLesson;
-    //晚上第一节
-    private OneTime fifthLesson;
-    //晚上第二节
-    private OneTime sixthLesson;
 
-    public OneTime getFirstLesson() {
-        return firstLesson;
+    //当前时间段
+    private String time;
+    //周一
+    private String monday;
+    //周二
+    private String tuesday;
+    //周三
+    private String wednesday;
+    //周四
+    private String thursday;
+    //周五
+    private String friday;
+    //周六
+    private String saturday;
+    //周日
+    private String sunday;
+
+    public String getTime() {
+        return time;
     }
 
-    public void setFirstLesson(OneTime firstLesson) {
-        this.firstLesson = firstLesson;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public OneTime getSecondLesson() {
-        return secondLesson;
+    public String getMonday() {
+        return monday;
     }
 
-    public void setSecondLesson(OneTime secondLesson) {
-        this.secondLesson = secondLesson;
+    public void setMonday(String monday) {
+        this.monday = monday;
     }
 
-    public OneTime getThirdLesson() {
-        return thirdLesson;
+    public String getTuesday() {
+        return tuesday;
     }
 
-    public void setThirdLesson(OneTime thirdLesson) {
-        this.thirdLesson = thirdLesson;
+    public void setTuesday(String tuesday) {
+        this.tuesday = tuesday;
     }
 
-    public OneTime getFourLesson() {
-        return fourLesson;
+    public String getWednesday() {
+        return wednesday;
     }
 
-    public void setFourLesson(OneTime fourLesson) {
-        this.fourLesson = fourLesson;
+    public void setWednesday(String wednesday) {
+        this.wednesday = wednesday;
     }
 
-    public OneTime getFifthLesson() {
-        return fifthLesson;
+    public String getThursday() {
+        return thursday;
     }
 
-    public void setFifthLesson(OneTime fifthLesson) {
-        this.fifthLesson = fifthLesson;
+    public void setThursday(String thursday) {
+        this.thursday = thursday;
     }
 
-    public OneTime getSixthLesson() {
-        return sixthLesson;
+    public String getFriday() {
+        return friday;
     }
 
-    public void setSixthLesson(OneTime sixthLesson) {
-        this.sixthLesson = sixthLesson;
+    public void setFriday(String friday) {
+        this.friday = friday;
     }
 
-    //每一个时间段不同天的课程
-    public static class OneTime{
-        //周一
-        private String monday;
-        //周二
-        private String tuesday;
-        //周三
-        private String wednesday;
-        //周四
-        private String thursday;
-        //周五
-        private String friday;
-        //周六
-        private String saturday;
-        //周日
-        private String sunday;
+    public String getSaturday() {
+        return saturday;
+    }
 
-        public String getMonday() {
-            return monday;
-        }
+    public void setSaturday(String saturday) {
+        this.saturday = saturday;
+    }
 
-        public void setMonday(String monday) {
-            this.monday = monday;
-        }
+    public String getSunday() {
+        return sunday;
+    }
 
-        public String getTuesday() {
-            return tuesday;
-        }
-
-        public void setTuesday(String tuesday) {
-            this.tuesday = tuesday;
-        }
-
-        public String getWednesday() {
-            return wednesday;
-        }
-
-        public void setWednesday(String wednesday) {
-            this.wednesday = wednesday;
-        }
-
-        public String getThursday() {
-            return thursday;
-        }
-
-        public void setThursday(String thursday) {
-            this.thursday = thursday;
-        }
-
-        public String getFriday() {
-            return friday;
-        }
-
-        public void setFriday(String friday) {
-            this.friday = friday;
-        }
-
-        public String getSaturday() {
-            return saturday;
-        }
-
-        public void setSaturday(String saturday) {
-            this.saturday = saturday;
-        }
-
-        public String getSunday() {
-            return sunday;
-        }
-
-        public void setSunday(String sunday) {
-            this.sunday = sunday;
-        }
+    public void setSunday(String sunday) {
+        this.sunday = sunday;
     }
 }
