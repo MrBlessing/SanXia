@@ -63,9 +63,12 @@ public class ScoreRecyclerAdapter extends RecyclerView.Adapter<ScoreRecyclerAdap
                 color = R.color.red1;
             }
         }
-        setColor(myLocalViewHolder,color);
+        int realColor = context.getResources().getColor(color);
+        myLocalViewHolder.courseScore.setTextColor(realColor);
+        myLocalViewHolder.colorView.setBackgroundColor(realColor);
     }
 
+    //更新数据
     public void refreshData(List<ScoreData> data){
         this.data = data==null ? new ArrayList<>() : data;
         notifyDataSetChanged();
@@ -74,12 +77,6 @@ public class ScoreRecyclerAdapter extends RecyclerView.Adapter<ScoreRecyclerAdap
     @Override
     public int getItemCount() {
         return data.size();
-    }
-
-    private void setColor(MyLocalViewHolder holder , int id){
-        int color = context.getResources().getColor(id);
-        holder.courseScore.setTextColor(color);
-        holder.colorView.setBackgroundColor(color);
     }
 
     class MyLocalViewHolder extends RecyclerView.ViewHolder {

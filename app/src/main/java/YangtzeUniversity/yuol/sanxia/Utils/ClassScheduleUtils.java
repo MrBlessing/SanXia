@@ -1,5 +1,7 @@
 package YangtzeUniversity.yuol.sanxia.Utils;
 
+import android.util.Log;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -18,7 +20,6 @@ import okhttp3.Call;
 import okhttp3.Response;
 
 public class ClassScheduleUtils {
-   private static final String TAG = "ClassScheduleUtils";
 
    public void getClassSchedule(OnQueryClassEnd classEnd){
        RequestUtils.sendRequest(Urls.class_schedule, new MyCallBack() {

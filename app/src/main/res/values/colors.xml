@@ -27,4 +27,23 @@
     <color name="black">#000</color>
     <!--白色-->
     <color name="white">#fff</color>
+    
+    <!--樱草色-->
+    <color name="yinCao">#eaff56</color>
+    <!--橙黄-->
+    <color name="chengHuang">#ffa400</color>
+    <!--葱黄-->
+    <color name="congHuang">#a3d900</color>
+    <!--杏红-->
+    <color name="xingHong">#ff8c31</color>
+    <!--昏黄-->
+    <color name="hunHuang">#c89b40</color>
+    <!--玉色-->
+    <color name="yu">#2edfa3</color>
+    <!--蔚蓝-->
+    <color name="weiNan">#70f3ff</color>
+    <!--丁香色-->
+    <color name="dinXiang">#cca4e3</color>
+    <!--紫棠-->
+    <color name="ziTang">#56004f</color>
 </resources>

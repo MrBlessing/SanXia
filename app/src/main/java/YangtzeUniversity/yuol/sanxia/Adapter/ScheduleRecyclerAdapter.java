@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
     //第一行的时间信息
     private List<String> timeData;
     private Context context;
+    private static final String TAG = "ScheduleRecyclerAdapter";
 
     public ScheduleRecyclerAdapter(Context c , List<ClassScheduleData> d){
         data = d;
@@ -40,8 +42,7 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
     @Override
     public MyLocalViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(context).inflate(R.layout.recycler_item_class_schedule,viewGroup,false);
-        MyLocalViewHolder holder = new MyLocalViewHolder(view);
-        return holder;
+        return new MyLocalViewHolder(view);
     }
 
     @Override
@@ -62,10 +63,14 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
     }
 
     private void setItemText(MyScheduleItem view,String text) {
-        if(TextUtils.isEmpty(text))
+        if(TextUtils.isEmpty(text)){
             view.setContainerVisible(View.GONE);
-        else
+        }
+        else{
             view.setText(text);
+            view.setContainerVisible(View.VISIBLE);
+        }
+
     }
 
     @Override
@@ -73,6 +78,11 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
         return data.size();
     }
 
+    //更新数据
+    public void refreshData(List<ClassScheduleData> data){
+        this.data = data==null ? new ArrayList<>() : data;
+        notifyDataSetChanged();
+    }
 
     class MyLocalViewHolder extends RecyclerView.ViewHolder{
         TextView time;

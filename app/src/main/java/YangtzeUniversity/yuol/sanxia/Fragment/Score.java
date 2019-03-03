@@ -80,14 +80,11 @@ public class Score extends Fragment implements OnQueryScoreEnd {
 
         //初始化工具类
         initUtils();
-
-        //获取成绩列表
-        scoreUtils.getScore(this);
-
         //刷新事件
         refreshLayout.setOnRefreshListener((layout)->{
             scoreUtils.getScore(this);
         });
+        refreshLayout.autoRefresh();
     }
 
     private void initUtils() {
