@@ -2,6 +2,7 @@ package YangtzeUniversity.yuol.sanxia.Activity;
 
 import android.support.design.widget.BottomNavigationView;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -13,6 +14,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 
 import YangtzeUniversity.yuol.sanxia.CustomizedView.MyActionBar;
 import YangtzeUniversity.yuol.sanxia.Fragment.ClassSchedule;
@@ -26,6 +30,7 @@ public class MainActivity extends BasedActivity {
     private BottomNavigationView bottomNavigationView;
     private MyActionBar actionBar;
     private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
     //定义3个碎片
     private Home home;
     private ClassSchedule schedule;
@@ -76,15 +81,20 @@ public class MainActivity extends BasedActivity {
     }
 
     private void initNavigation() {
-        View header = LayoutInflater.from(this).inflate(R.layout.item_navigation_header,null);
+        //设置Navigation的头布局
+        View header = navigationView.getHeaderView(0);
         ImageView imageView = header.findViewById(R.id.nav_header_image);
         TextView name = header.findViewById(R.id.nav_header_name);
-        TextView id = header.findViewById(R.id.nav_header_id);
-
+        TextView grade = header.findViewById(R.id.nav_header_class);
+        Glide.with(header)
+                .load(R.drawable.headimage)
+                .transform(new CircleCrop())
+                .into(imageView);
+        name.setText("姓名 : 明美");
+        grade.setText("班级 : 未知");
     }
 
     private void initFragment() {
-
         //开启碎片管理类
         manager = getSupportFragmentManager();
         //默认展现home碎片
@@ -105,6 +115,7 @@ public class MainActivity extends BasedActivity {
         bottomNavigationView = findViewById(R.id.main_navigation);
         actionBar = findViewById(R.id.main_actionbar);
         drawerLayout = findViewById(R.id.main_drawer);
+        navigationView = findViewById(R.id.main_navigationView);
     }
 
     //更换fragment

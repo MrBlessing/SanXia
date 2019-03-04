@@ -1,8 +1,10 @@
 package YangtzeUniversity.yuol.sanxia.CustomizedView;
 
 import android.content.Context;
+import android.graphics.PorterDuff;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -39,8 +41,6 @@ public class MyScheduleItem extends FrameLayout {
     public void setText(String text) {
         textView.setText(text);
         setCardBgColor(text);
-//        //设置CardView的透明度,半透明
-//        cardView.getBackground().setAlpha(125);
     }
 
     //设置背景颜色
@@ -61,7 +61,7 @@ public class MyScheduleItem extends FrameLayout {
         }else {
             color = sAndC.get(s);
         }
-        cardView.setBackgroundColor(getResources().getColor(color));
+        cardView.setCardBackgroundColor(getResources().getColor(color));
     }
 
     //设置卡片可视
@@ -81,6 +81,11 @@ public class MyScheduleItem extends FrameLayout {
             colorBox.add(R.color.dinXiang);
             colorBox.add(R.color.ziTang);
         }
+    }
+
+    //设置卡片背景透明度
+    public void setCardAlpha(int alpha){
+        cardView.getBackground().setAlpha(alpha);
     }
 
 }
